@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,9 +28,16 @@
 
 #pragma once
 
-#include <sys/cdefs.h>
-#ifdef __mips__
-#include <asm/cachectl.h>
-#endif
+/**
+ * @file legacy_fenv_inlines_mips.h
+ * @brief Inline MIPS-specific definitions of fenv for old API levels.
+ */
 
-/* This header file is obsolete. */
+#include <sys/cdefs.h>
+
+#if __ANDROID_API__ < 21 && (defined(__mips__) && !defined(__LP64__))
+
+#define __BIONIC_FENV_INLINE static __inline
+#include <bits/fenv_inlines_mips.h>
+
+#endif

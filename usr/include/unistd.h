@@ -342,7 +342,7 @@ long syscall(long __number, ...);
 
 int daemon(int __no_chdir, int __no_close);
 
-#if defined(__arm__)
+#if defined(__arm__) || (defined(__mips__) && !defined(__LP64__))
 int cacheflush(long __addr, long __nbytes, long __cache);
     /* __attribute__((deprecated("use __builtin___clear_cache instead"))); */
 #endif
