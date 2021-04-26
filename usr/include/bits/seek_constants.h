@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _SEEK_CONSTANTS_H_
+#define _SEEK_CONSTANTS_H_
 
 /**
  * @file bits/seek_constants.h
@@ -57,5 +58,7 @@
  * See [lseek(2)](http://man7.org/linux/man-pages/man2/lseek.2.html).
  */
 #define SEEK_HOLE 4
+
+#endif
 
 #endif

@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _ALLOCA_H_
+#define _ALLOCA_H_
 
 /**
  * @file alloca.h
@@ -44,3 +45,5 @@
  * @return a pointer to the space on success, but has undefined behavior on failure.
  */
 #define alloca(size)   __builtin_alloca(size)
+
+#endif

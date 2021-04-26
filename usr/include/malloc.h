@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-#pragma once
+#ifndef _MALLOC_H_
+#define _MALLOC_H_
 
 /**
  * @file malloc.h
@@ -333,3 +334,5 @@ extern void* (*volatile __memalign_hook)(size_t __alignment, size_t __byte_count
 
 
 __END_DECLS
+
+#endif

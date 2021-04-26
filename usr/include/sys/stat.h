@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _STAT_H_
+#define _STAT_H_
 
 /**
  * @file sys/stat.h
@@ -221,3 +222,5 @@ int statx(int __dir_fd, const char* __path, int __flags, unsigned __mask, struct
 __END_DECLS
 
 #include <android/legacy_sys_stat_inlines.h>
+
+#endif

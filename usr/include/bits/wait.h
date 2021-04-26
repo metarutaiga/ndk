@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _WAIT_H_
+#define _WAIT_H_
 
 /**
  * @file bits/wait.h
@@ -66,3 +67,5 @@
 
 /** Constructs a status value for a process stopped by the given signal. */
 #define W_STOPCODE(__signal_number) ((__signal_number) << 8 | 0x7f)
+
+#endif

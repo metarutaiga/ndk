@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _SELECT_H_
+#define _SELECT_H_
 
 /**
  * @file sys/select.h
@@ -137,3 +138,5 @@ int pselect64(int __fd_count, fd_set* __read_fds, fd_set* __write_fds, fd_set* _
 
 
 __END_DECLS
+
+#endif

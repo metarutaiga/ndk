@@ -34,7 +34,8 @@
  *	@(#)cdefs.h	8.8 (Berkeley) 1/9/95
  */
 
-#pragma once
+#ifndef _CDEFS_H_
+#define _CDEFS_H_
 
 /**
  * `__BIONIC__` is always defined if you're building with bionic. See
@@ -369,4 +370,6 @@ int __size_mul_overflow(__SIZE_TYPE__ a, __SIZE_TYPE__ b, __SIZE_TYPE__ *result)
 #include <android/api-level.h>
 #if __has_include(<android/ndk-version.h>)
 #include <android/ndk-version.h>
+#endif
+
 #endif

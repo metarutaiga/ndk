@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _PTHREAD_TYPES_H_
+#define _PTHREAD_TYPES_H_
 
 #include <sys/cdefs.h>
 #include <sys/types.h>
@@ -102,3 +103,5 @@ typedef struct {
 #endif
 
 typedef long pthread_t;
+
+#endif

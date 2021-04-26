@@ -26,7 +26,8 @@
  * SUCH DAMAGE.
  */
 
-#pragma once
+#ifndef _SIGNAL_TYPES_H_
+#define _SIGNAL_TYPES_H_
 
 #include <limits.h>
 #include <sys/cdefs.h>
@@ -105,5 +106,7 @@ struct sigaction64 {
   void (*sa_restorer)(void);
   sigset64_t sa_mask;
 };
+
+#endif
 
 #endif
