@@ -13,6 +13,20 @@ int main(int argc, char* argv[])
       args += " ";
       continue;
     }
+    if (strcmp(argv[i], "-o") == 0)
+    {
+      i++;
+
+      args += " ";
+      args += "-o";
+      args += " ";
+
+      args += "\"";
+      args += argv[i];
+      args += "\"";
+      args += " ";
+      continue;
+    }
     if (strcmp(argv[i], "-filelist") == 0)
     {
       i++;
