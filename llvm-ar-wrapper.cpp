@@ -49,6 +49,14 @@ int main(int argc, char* argv[])
     {
       continue;
     }
+    if (strcmp(argv[i], "mips") == 0)
+    {
+      continue;
+    }
+    if (strcmp(argv[i], "mips64") == 0)
+    {
+      continue;
+    }
     if (strcmp(argv[i], "i686") == 0)
     {
       continue;
