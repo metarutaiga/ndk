@@ -26,8 +26,7 @@
  * SUCH DAMAGE.
  */
 
-#ifndef _XLOCALE_H_
-#define _XLOCALE_H_
+#pragma once
 
 /**
  * @file xlocale.h
@@ -48,5 +47,3 @@ struct __locale_t;
  * The `locale_t` type that represents a locale.
  */
 typedef struct __locale_t* locale_t;
-
-#endif
