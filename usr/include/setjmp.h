@@ -56,6 +56,12 @@
   #endif
 #elif defined(__x86_64__)
 #define _JBLEN 11
+#elif defined(__riscv)
+  #if defined(__LP64__)
+  #define _JBLEN 42
+  #else
+  #define _JBLEN 58
+  #endif
 #endif
 
 typedef long sigjmp_buf[_JBLEN + 1];

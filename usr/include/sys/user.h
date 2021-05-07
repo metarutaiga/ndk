@@ -249,6 +249,27 @@ struct user_fpsimd_struct {
   uint32_t fpcr;
 };
 
+#elif defined(__riscv)
+
+// I comment out struct user and rebuild libc, passed
+// TBD, don't know what's this used for, just keep commented out till some
+// one else use it
+#if 0
+struct user {
+  unsigned long regs[180 / sizeof(unsigned long) + 64];
+  size_t u_tsize;
+  size_t u_dsize;
+  size_t u_ssize;
+  unsigned long start_code;
+  unsigned long start_data;
+  unsigned long start_stack;
+  long int signal;
+  void* u_ar0;
+  unsigned long magic;
+  char u_comm[32];
+};
+#endif
+
 #else
 
 #error "Unsupported architecture."
