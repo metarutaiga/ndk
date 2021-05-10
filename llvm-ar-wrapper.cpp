@@ -57,6 +57,14 @@ int main(int argc, char* argv[])
     {
       continue;
     }
+    if (strcmp(argv[i], "riscv32") == 0)
+    {
+      continue;
+    }
+    if (strcmp(argv[i], "riscv64") == 0)
+    {
+      continue;
+    }
     if (strcmp(argv[i], "i686") == 0)
     {
       continue;
