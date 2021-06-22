@@ -22,6 +22,9 @@
 #define __ARCH_WANT_SYS_CLONE3
 #endif
 #include <asm-generic/unistd.h>
+#ifndef __NR_futex
+#define __NR_futex (__NR_unshare + 1)
+#endif
 #ifndef __NR_riscv_flush_icache
 #define __NR_riscv_flush_icache (__NR_arch_specific_syscall + 15)
 #endif
